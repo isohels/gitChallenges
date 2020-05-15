@@ -45,3 +45,51 @@ git checkout HEAD^
 git reset local~1 (for local commits)
 git checkout pushed
 git revert HEAD (for remote commits)
+
+
+3.1 Cherry-pick Intro
+
+git cherry-pick c3 c4 c7
+
+
+3.2 Interactive Rebase Intro
+
+git rebase -i HEAD~4
+
+
+4.1 Grabbing Just 1 Commit
+
+git rebase -i HEAD~3
+git branch -f master c4'
+
+
+4.2 Juggling Commits
+
+git rebase -i HEAD~2
+git Checkout newImage
+git rebase -i HEAD~1
+git checkout caption
+git rebase -i HEAD~2
+git branch -f master c3''
+
+
+4.3 Juggling Commits #2
+
+git checkout master
+git cherry-pick c2
+git cherry-pick c3
+
+4.4 Git Tags
+
+git tag v0 c1
+git tag v1 c2
+git checkout c2
+
+
+4.5 Git Describe
+
+git describe bugFix
+git describe side
+git describe master
+git commit
+
